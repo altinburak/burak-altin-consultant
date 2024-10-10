@@ -7,11 +7,12 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9;
+    background-color: #f7f7fa;
+    color: #333;
 }
 
 header {
-    background: #333;
+    background: linear-gradient(to right, #4a90e2, #00509e);
     color: #fff;
     height: 100vh;
     display: flex;
@@ -29,14 +30,38 @@ nav {
     padding: 1rem 3rem;
     position: fixed;
     top: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 80, 158, 0.8);
     z-index: 10;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
+    letter-spacing: 1px;
 }
+/* Other CSS remains the same */
+
+.logo img {
+    height: auto;
+    width: 10vw; /* Set width relative to viewport width */
+    max-width: 40px; /* Max size for large screens */
+    min-width: 15px; /* Min size for small screens */
+    margin-right: 10px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .logo img {
+        width: 20vw; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 25vw; /* Further adjust for very small screens */
+    }
+}
+
 
 .nav-links {
     list-style: none;
@@ -55,7 +80,7 @@ nav {
 }
 
 .nav-links li a:hover {
-    color: #FFD700;
+    color: #ffcc00;
 }
 
 .hero {
@@ -64,18 +89,18 @@ nav {
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 3.5rem;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
 }
 
 .cta-button {
-    background: #FFD700;
-    color: #333;
+    background: #ffcc00;
+    color: #00509e;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     font-weight: bold;
@@ -84,22 +109,23 @@ nav {
 }
 
 .cta-button:hover {
-    background: #fff;
+    background: #ffd633;
 }
 
 main {
-    padding: 50px 15px;
+    padding: 60px 15px;
 }
 
 .services-section, .about-section, .contact-section {
-    padding: 50px 0;
+    padding: 60px 0;
     text-align: center;
     background: #fff;
 }
 
 .services-section h2, .about-section h2, .contact-section h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #00509e;
 }
 
 .services-container {
@@ -109,16 +135,88 @@ main {
 }
 
 .service {
-    background: #f1f1f1;
-    padding: 20px;
-    margin: 10px;
-    width: 250px;
-    border-radius: 8px;
+    background: #f1f4f9;
+    padding: 30px;
+    margin: 15px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .service h3 {
     margin-bottom: 10px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    color: #00509e;
+}
+
+.service p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.about-section {
+    background-color: #f7f7fa;
+    padding: 50px 0;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.contact-section {
+    background: #e9f1f7;
+    padding: 80px 0;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section form input, 
+.contact-section form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #333;
+    background: #f9f9f9;
+}
+
+.contact-section form input:focus, 
+.contact-section form textarea:focus {
+    outline: none;
+    border-color: #00509e;
+}
+
+.contact-section form button {
+    background: #00509e;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-section form button:hover {
+    background: #003d80;
 }
 
 footer {
@@ -126,4 +224,106 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* Other CSS remains the same */
+
+.testimonials-section {
+    background: #f7f7fa;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #00509e;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%; /* Make the testimonials section wider */
+    margin: 0 auto;
+}
+
+.testimonial {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 20px 40px;
+    margin: 15px;
+    width: 100%;
+    max-width: 900px; /* Adjust width for a more extensive layout */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+    position: relative;
+    font-style: italic;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    width: 80px; /* Increased size for larger layout */
+    height: 80px;
+    margin-right: 20px;
+}
+
+.testimonial-text {
+    flex-grow: 1;
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #00509e;
+}
+
+@media (max-width: 768px) {
+    .testimonial {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .testimonial img {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial {
+        padding: 15px;
+        width: 100%;
+    }
+}
+
+
+.testimonial p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #00509e;
 }
